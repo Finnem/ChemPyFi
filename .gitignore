@@ -1,0 +1,18 @@
+__pycache__/
+**/*.pyc
+*.pyc
+.ipynb_checkpoints/
+*.identifier
+.history/
+
+pymolviz.egg-info/
+module/dist/
+module/build/
+*.egg-info/
+
+z3*
+
+# Local scratch / legacy playground (removed from version control)
+test/
+
+docs/refactor/

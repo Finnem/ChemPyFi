@@ -249,7 +249,7 @@ def _compare_step7(
         "legacy_value_kj_mol": legacy["total_interaction_energy"],
         "new_value_kj_mol": new["total_interaction_energy"],
         "historical_reference_5L4Q_kj_mol": -182.5663,
-        "historical_source": "test/relax_5L4Q_full_pure_obj01_entry_00001_conf_01/extract_COVALED_run.log",
+        "historical_source": "extract_COVALED_run.log (CHEMPYFI_ORCA_LED_FIXTURE_DIR bundle)",
     }
 
     component_map = [

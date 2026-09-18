@@ -37,9 +37,11 @@ def test_regression_5l4q_historical_total_interaction_energy():
     """Matches extract_COVALED_run.log TOTAL INTERACTION ENERGY: -182.5663 kJ/mol."""
     from chempyfi_covaled.equivalence.harness import resolve_fixture_paths, run_legacy_gas_phase
 
-    fixture = Path(__file__).resolve().parents[3] / "test/relax_5L4Q_full_pure_obj01_entry_00001_conf_01"
-    if not fixture.exists():
-        pytest.skip("5L4Q fixture not present")
+    from tests.oracle_fixture import relax_5l4q_fixture_dir
+
+    fixture = relax_5l4q_fixture_dir()
+    if fixture is None or not fixture.is_dir():
+        pytest.skip("Set CHEMPYFI_ORCA_LED_FIXTURE_DIR to the 5L4Q fixture directory")
     paths = resolve_fixture_paths(fixture)
     lig = [36]
     rec = list(range(1, 36))

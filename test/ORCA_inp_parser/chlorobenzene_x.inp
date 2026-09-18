@@ -1,8 +1,0 @@
-! RI-MP2 def2-TZVPP def2-TZVPP/C RIJCOSX def2/J TightSCF
-
-%pal
-  nprocs 16
-end
-%maxcore 6800
-
-* xyzfile 0 1 chlorobenzene_x.xyz

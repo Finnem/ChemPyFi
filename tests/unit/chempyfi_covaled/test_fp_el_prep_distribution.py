@@ -86,14 +86,14 @@ def test_positive_and_negative_coupling():
 @pytest.mark.unit
 def test_regression_5l4q_super_ref_sheet():
     """Reproduce prior all-NaN failure: upper+diag REF from real fixture Excel."""
-    from pathlib import Path
+    from tests.oracle_fixture import relax_5l4q_fixture_dir
 
-    excel = (
-        Path(__file__).resolve().parents[3]
-        / "test/relax_5L4Q_full_pure_obj01_entry_00001_conf_01/super/orca_2111303/All_Standard_LED_matrices.xlsx"
-    )
+    fixture = relax_5l4q_fixture_dir()
+    if fixture is None or not fixture.is_dir():
+        pytest.skip("Set CHEMPYFI_ORCA_LED_FIXTURE_DIR to the 5L4Q fixture directory")
+    excel = fixture / "super/orca_2111303/All_Standard_LED_matrices.xlsx"
     if not excel.exists():
-        pytest.skip("5L4Q fixture not present")
+        pytest.skip("5L4Q All_Standard Excel not in fixture directory")
     ref = pd.read_excel(excel, sheet_name="REF", index_col=0).values.astype(float)
     out = fp_el_prep_distribution(ref)
     assert np.isfinite(out).sum() == 630

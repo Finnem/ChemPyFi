@@ -105,7 +105,6 @@ module/
   chempyfi_pymol/     # PyMOL visualization
 packages/             # per-distribution pyproject.toml metadata
 tests/                # pytest suite (unit, integration, architecture)
-test/                 # older scripts and fixtures (some still collected by pytest)
 docs/refactor/        # architecture and dependency notes from the XBPy migration
 scripts/              # developer utilities (e.g. LED path comparison)
 ```
@@ -130,6 +129,12 @@ pytest -m opi
 ```
 
 Markers are defined in `pytest.ini`. CI-oriented runs should not require a local ORCA binary (`orca` marker) or proprietary Excel regression fixtures (`chempyfi_covaled_oracle`).
+
+Optional developer oracle data (e.g. the 5L4Q bundle) is not in the repository. Point tests and `scripts/compare_led_paths.py` at an external directory:
+
+```bash
+export CHEMPYFI_ORCA_LED_FIXTURE_DIR=/path/to/relax_5L4Q_full_pure_obj01_entry_00001_conf_01
+```
 
 ## License
 
