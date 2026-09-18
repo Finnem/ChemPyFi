@@ -1,0 +1,42 @@
+{
+  "geometries": [
+    {
+      "geometry": {
+        "natoms": 2,
+        "fragments": [
+          [
+            1
+          ]
+        ]
+      },
+      "mdci_led": {
+        "numoffragments": 1,
+        "totint": [
+          [
+            -0.15
+          ]
+        ],
+        "refint": [
+          [
+            -0.06
+          ]
+        ],
+        "corrint": [
+          [
+            -0.04
+          ]
+        ],
+        "electrostref": [
+          [
+            -0.02
+          ]
+        ],
+        "exchangeref": [
+          [
+            -0.03
+          ]
+        ]
+      }
+    }
+  ]
+}

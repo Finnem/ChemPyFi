@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chempyfi"
+version = "0.1"
+description = "RDKit-based molecular toolkit for local models, interactions, and ORCA-adjacent workflows."
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Finn Mier" }]
+dependencies = [
+    "numpy",
+    "scipy",
+    "tqdm",
+    "rdkit-pypi",
+]
+
+[project.optional-dependencies]
+viz = [
+    "pymolviz",
+]
+bondorder = [
+    "z3-solver",
+]
+opi = [
+    "orca-pi>=2.0.0",
+]
+covaled = [
+    "pandas",
+    "orca-pi>=2.0.0",
+]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Documentation = "https://github.com/example/chempyfi"
+
+[tool.setuptools.packages.find]
+where = ["module"]
+include = ["chempyfi*", "chempyfi_pymol*", "chempyfi_covaled*"]
+
+[tool.setuptools.package-data]
+chempyfi = ["py.typed"]

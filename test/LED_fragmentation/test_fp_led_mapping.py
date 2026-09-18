@@ -3,7 +3,7 @@ Example of using compute_fp_led_interactions_with_mapping to compute fp-LED inte
 with custom fragment mappings (no position matching required).
 """
 
-from xbpy.orcautil import compute_fp_led_interactions_with_mapping
+from chempyfi.orcautil import compute_fp_led_interactions_with_mapping
 from pathlib import Path
 
 def example_fp_led_with_custom_mappings():
@@ -116,7 +116,7 @@ def example_from_orca_input():
     """
     Example: Extract fragment mappings from ORCA input file and use them.
     """
-    from xbpy.rdutil.io import read_orca_inp_file
+    from chempyfi.rdutil.io import read_orca_inp_file
     import json
     
     # Read ORCA input file to get fragment information

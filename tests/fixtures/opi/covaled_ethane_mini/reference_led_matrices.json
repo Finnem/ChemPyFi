@@ -1,0 +1,131 @@
+{
+  "description": "Trusted kJ/mol reference derived from committed .property.json Hartree values",
+  "energy_unit": "kJ/mol",
+  "orca_pi_fixture": "synthetic; not a licensed production run",
+  "roles": {
+    "super": {
+      "fragment_ids": [
+        1,
+        2
+      ],
+      "totint": [
+        [
+          -262.55,
+          9.9952785
+        ],
+        [
+          9.9952785,
+          -525.1
+        ]
+      ],
+      "refint": [
+        [
+          -105.02,
+          4.006513
+        ],
+        [
+          4.006513,
+          -210.04
+        ]
+      ],
+      "corrint": [
+        [
+          -78.765,
+          5.9887655
+        ],
+        [
+          5.9887655,
+          -157.53
+        ]
+      ],
+      "electrostref": [
+        [
+          -52.51,
+          2.6255
+        ],
+        [
+          2.6255,
+          -78.765
+        ]
+      ],
+      "exchangeref": [
+        [
+          -131.275,
+          1.31275
+        ],
+        [
+          1.31275,
+          -288.805
+        ]
+      ]
+    },
+    "ligand": {
+      "fragment_ids": [
+        1
+      ],
+      "totint": [
+        [
+          -210.04
+        ]
+      ],
+      "refint": [
+        [
+          -78.765
+        ]
+      ],
+      "corrint": [
+        [
+          -52.51
+        ]
+      ],
+      "electrostref": [
+        [
+          -26.255
+        ]
+      ],
+      "exchangeref": [
+        [
+          -52.51
+        ]
+      ]
+    },
+    "receptor": {
+      "fragment_ids": [
+        1
+      ],
+      "totint": [
+        [
+          -393.825
+        ]
+      ],
+      "refint": [
+        [
+          -157.53
+        ]
+      ],
+      "corrint": [
+        [
+          -105.02
+        ]
+      ],
+      "electrostref": [
+        [
+          -52.51
+        ]
+      ],
+      "exchangeref": [
+        [
+          -78.765
+        ]
+      ]
+    }
+  },
+  "covaled_partition": {
+    "ligand_fragment_ids": [
+      1
+    ],
+    "receptor_fragment_ids": [
+      2
+    ]
+  }
+}

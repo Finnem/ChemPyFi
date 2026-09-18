@@ -2,7 +2,7 @@ from pymol import cmd
 import chempy
 from chempy.sdf import SDFRec
 from rdkit import Chem
-from xbpy import vizualize_ligand_interactions, PyMOLInterface, rdutil
+from chempyfi import vizualize_ligand_interactions, PyMOLInterface, rdutil
 vizualize_ligand_interactions("sele")
 '''
 pymol_interface = PyMOLInterface("sele")

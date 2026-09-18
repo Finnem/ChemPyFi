@@ -1,4 +1,4 @@
-from xbpy import rdutil
+from chempyfi import rdutil
 no_frags_mol = rdutil.read_molecules("bromobenzene_x_no_frags.inp")
 rdutil.write_molecules(no_frags_mol, "bromobenzene_x_no_frags.sdf")
 frags_mol = rdutil.read_molecules("bromobenzene_x.inp")

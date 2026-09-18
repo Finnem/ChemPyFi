@@ -1,0 +1,12 @@
+chempyfi>=0.1
+numpy
+pandas
+
+[dev]
+pytest
+
+[export]
+openpyxl
+
+[opi]
+orca-pi>=2.0.0

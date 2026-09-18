@@ -1,0 +1,3 @@
+chempyfi
+chempyfi_covaled
+chempyfi_pymol

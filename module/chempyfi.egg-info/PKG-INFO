@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: chempyfi
+Version: 0.1
+Summary: RDKit-based molecular toolkit for local models, interactions, and ORCA-adjacent workflows.
+Author: Finn Mier
+License: MIT
+Project-URL: Documentation, https://github.com/example/chempyfi
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: rdkit-pypi
+Provides-Extra: viz
+Requires-Dist: pymolviz; extra == "viz"
+Provides-Extra: bondorder
+Requires-Dist: z3-solver; extra == "bondorder"
+Provides-Extra: opi
+Requires-Dist: orca-pi>=2.0.0; extra == "opi"
+Provides-Extra: covaled
+Requires-Dist: pandas; extra == "covaled"
+Requires-Dist: orca-pi>=2.0.0; extra == "covaled"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"

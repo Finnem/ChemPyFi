@@ -1,0 +1,13 @@
+# ChemPyFi + CovaLED/LEDAW spreadsheet dependencies (extends core env)
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate chempyfi
+#   conda env update -f environment-led.yml
+
+name: chempyfi
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - openpyxl
+  - seaborn

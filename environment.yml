@@ -1,0 +1,21 @@
+# Dedicated ChemPyFi environment (conda-forge RDKit + core scientific stack)
+#
+#   conda env create -f environment.yml
+#   conda activate chempyfi
+#   ./scripts/install_editable.sh
+#
+# LED/CovaLED Excel support (optional):
+#   conda env update -f environment-led.yml
+
+name: chempyfi
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rdkit>=2023.09
+  - numpy
+  - scipy
+  - tqdm
+  - pytest
+  - z3-solver
+  - pip

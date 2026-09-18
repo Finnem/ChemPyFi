@@ -1,0 +1,27 @@
+# CovaLED
+
+Gas-phase **CovaLED Step 7** and **fp-CovaLED Step 8** with **OPI** (`orca-pi`) as the sole supported ORCA interface.
+
+## Install
+
+```bash
+pip install chempyfi_covaled[opi]
+```
+
+Requires **Python ≥3.11** and a licensed **ORCA** installation with JSON property output for analysis.
+
+## Public API
+
+```python
+from chempyfi_covaled.led_data import LEDData
+from chempyfi_covaled import compute_covaled, compute_fp_covaled
+from chempyfi_covaled.pipeline import analyze_output
+from chempyfi_covaled.workflow import run_and_analyze  # reserved for future OPI execution
+```
+
+## Tests (from repo root)
+
+```bash
+pytest -m "unit and chempyfi_covaled"   # pure math / LEDData
+pytest -m opi                  # orca-pi + synthetic JSON gate
+```

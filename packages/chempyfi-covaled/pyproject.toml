@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chempyfi-covaled"
+version = "0.1.0"
+description = "Gas-phase CovaLED / fp-CovaLED analysis (OPI-backed ORCA I/O)."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "chempyfi>=0.1",
+    "numpy",
+    "pandas",
+]
+
+[project.optional-dependencies]
+opi = ["orca-pi>=2.0.0"]
+export = ["openpyxl"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["../../module"]
+include = ["chempyfi_covaled*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["../../module"]
+testpaths = ["../../tests"]
+markers = [
+    "unit: chempyfi_covaled unit tests",
+    "integration: requires optional deps",
+    "opi: requires orca-pi",
+    "chempyfi_covaled_oracle: developer Excel regression (5L4Q)",
+]

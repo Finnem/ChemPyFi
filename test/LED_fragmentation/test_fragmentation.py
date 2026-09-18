@@ -1,5 +1,5 @@
-from xbpy import rdutil
-from xbpy.orcautil import fragment_molecule, write_orca_input
+from chempyfi import rdutil
+from chempyfi.orcautil import fragment_molecule, write_orca_input
 import rdkit.Chem as Chem
 import numpy as np
 import pymolviz as pmv

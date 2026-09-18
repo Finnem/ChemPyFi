@@ -1,4 +1,4 @@
-"""Tests for the canonical atom ordering of :func:`xbpy.morgan.unique_index`.
+"""Tests for the canonical atom ordering of :func:`chempyfi.morgan.unique_index`.
 
 The molecules here are built with hand-picked coordinates rather than generated
 conformers, because most of the properties under test are statements about exact
@@ -10,8 +10,8 @@ import pytest
 from rdkit import Chem
 from rdkit.Geometry import Point3D
 
-from xbpy.morgan import canonical_order, unique_index
-from xbpy.morgan.canonical import _placement_descriptor, _weisfeiler_lehman_labels
+from chempyfi.morgan import canonical_order, unique_index
+from chempyfi.morgan.canonical import _placement_descriptor, _weisfeiler_lehman_labels
 
 SINGLE = Chem.BondType.SINGLE
 DOUBLE = Chem.BondType.DOUBLE

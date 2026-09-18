@@ -1,5 +1,5 @@
 # %% [code]
-from xbpy import rdutil
+from chempyfi import rdutil
 import os
 #os.environ["XB_DEBUG_SAT"] = "1"
 # %% [code]

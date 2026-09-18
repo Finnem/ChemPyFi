@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chempyfi-pymol"
+version = "0.1.0"
+description = "PyMOL visualization adapters for ChemPyFi interaction results."
+requires-python = ">=3.8"
+dependencies = [
+    "chempyfi>=0.1",
+    "pymolviz",
+]
+
+[tool.setuptools.packages.find]
+where = ["../../module"]
+include = ["chempyfi_pymol*"]
